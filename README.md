@@ -126,7 +126,7 @@ add_filter('picturefill_wp_register_srcset', 'register_theme_srcsets');
 
 ####picturefill_wp_register_sizes($handle, $sizes_string, $attach_to)
 
-This function registers a sizes attribute and optionally assigns it to an image size. It should be called with the `picturefill_wp_register_srcset` action.
+This function registers a sizes attribute and optionally assigns it to an image size. It should be called with the `picturefill_wp_register_sizes` action.
 
 #####Parameters
 
@@ -143,7 +143,7 @@ function register_theme_sizes(){
   picturefill_wp_register_sizes('theme-medium-sizes', '(max-width: 30em) 100vw, (max-width: 50em) 50vw, calc(33vw - 100px)', 'medium');
 }
 
-add_filter('picturefill_wp_register_srcset', 'register_theme_sizes');
+add_filter('picturefill_wp_register_sizes', 'register_theme_sizes');
 ```
 
 ####picturefill_wp_apply_to_html($html, $cache)
